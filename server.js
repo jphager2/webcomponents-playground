@@ -31,8 +31,14 @@ var server = http.createServer(function(request, response) {
   var path = request.url;
   var mime = mimeType(path);
   var filename;
+  var method = request.method;
 
   console.log(`${request.method}: ${path}`);
+
+  if (method !== 'GET') {
+    finalize(response, 404);
+    return;
+  }
 
   if (path === '/') {
     path = '/index.html';

@@ -8,13 +8,76 @@
     -->
     <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.0.1/lib/iron-icon/iron-icon.html">
     <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.0.1/lib/iron-icons/iron-icons.html">
+    <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.0.1/lib/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.0.1/lib/paper-button/paper-button.html">
+    <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.0.1/lib/paper-input/paper-input.html">
+    <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.0.1/lib/paper-card/paper-card.html">
+    <link rel="import" href="https://cdn.rawgit.com/download/polymer-cdn/2.0.1/lib/iron-form/iron-form.html">
+
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
     <style is="custom-style">
+      :root {
+        --primary-color: #136ebb;
+      }
       iron-icon {
-        --iron-icon-fill-color: #136ebb;
+        --iron-icon-fill-color: var(--primary-color, blue);
+      }
+      paper-button {
+        background: var(--primary-color, blue);
+        color: white;
+      }
+      paper-card.big {
+        width: 700px;
+        max-width: 100%;
       }
     </style>
-    <iron-icon icon="icons:arrow-forward"></iron-icon>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        background: azure;
+      }
+      .form-block {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      section.center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section.main {
+        height: 100%;
+      }
+    </style>
+    <iron-icon icon="icons:arrow-back"></iron-icon>
+    <section class="center main">
+      <paper-card class="big" heading="Login">
+        <form is="iron-form" action="/" method="POST">
+          <div class="card-content">
+            <div class="form-block">
+              <paper-input name="email" label="email" type="email"></paper-input>
+            </div>
+
+            <div class="form-block">
+              <paper-input name="password" label="password" type="password"></paper-input>
+            </div>
+
+            <div class="form-block">
+              <paper-checkbox checked name="keep_signed_in">Keep me signed in</paper-checkbox>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <div class="form-block">
+              <paper-button raised class="primary" type="submit">Save</paper-button>
+            </div>
+          </div>
+        </form>
+      </paper-card>
+    </section>
   </body>
 </html>
