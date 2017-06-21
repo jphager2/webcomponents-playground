@@ -3,7 +3,7 @@ require 'yaml'
 require 'english'
 
 module ComponentManager
-  COMPONENTS_DIR = 'components'.freeze
+  COMPONENTS_DIR = 'web/components'.freeze
   COMPONENTS_FILE = 'components.lock'.freeze
 
   module_function
