@@ -1,5 +1,8 @@
 ---
+- ajaxorg/ace-builds
+- LostInBrittany/ace-widget
 - PolymerElements/font-roboto
+- LostInBrittany/granite-spinner
 - PolymerElements/iron-a11y-announcer
 - PolymerElements/iron-a11y-keys-behavior
 - PolymerElements/iron-ajax

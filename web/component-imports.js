@@ -8,6 +8,7 @@
     'paper-card/paper-card',
     'iron-form/iron-form',
     'paper-snackbar/paper-snackbar',
+    'granite-spinner/granite-spinner',
   ];
 
   document.addEventListener('WebComponentsReady', function() {
