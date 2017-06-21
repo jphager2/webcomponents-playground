@@ -41,7 +41,7 @@
         align-items: center;
       }
       section.main {
-        height: 100%;
+        max-height: 100%;
       }
     </style>
     <iron-icon icon="icons:arrow-back"></iron-icon>
@@ -70,5 +70,32 @@
         </paper-card>
       </form>
     </section>
+
+    <section>
+			<style is="custom-style">
+				paper-snackbar {
+					--paper-snackbar-background:     #323232;
+					--paper-snackbar-text:           #ffffff;
+					--paper-snackbar-link:           #f4cb1e;
+				}
+			</style>
+			<paper-button raised class="primary" onClick="snackbarAlert()">Snack Attack</paper-button>
+
+			<script>
+				function snackbarAlert() {
+					document.dispatchEvent(new CustomEvent('paper-snackbar-notify', {
+							bubbles: true,
+							composed: true,
+							detail: {
+								message: 'Hi! I am a paper-snackbar!',
+								targetTitle: 'Magic Link',
+								targetUrl: '#'
+							}
+					}));
+				}
+			</script>
+    </section>
+
+		<paper-snackbar></paper-snackbar>
   </body>
 </html>

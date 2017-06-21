@@ -7,6 +7,7 @@
     'paper-input/paper-input',
     'paper-card/paper-card',
     'iron-form/iron-form',
+    'paper-snackbar/paper-snackbar',
   ];
 
   document.addEventListener('WebComponentsReady', function() {
