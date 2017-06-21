@@ -25,12 +25,14 @@ node server
 
 ## Adding a component
 
+Also see [Loading a component](loading-a-component)
+
 ```
 cd web/components
 git clone git@github.com:user/repo.git
+cd ../..
+ruby scripts/component_manager.rb export
 ```
-
-See [Loading a component](loading-a-component)
 
 ## Loading a component
 
