@@ -24,7 +24,7 @@ var finalize = function(response, code, headers, data) {
 };
 
 var absolutePath = function(path) {
-  return '/Users/jph/projects/node/webcomponents/web' + path;
+  return `${__dirname}/web` + path;
 };
 
 var server = http.createServer(function(request, response) {
