@@ -23,16 +23,15 @@ node server
 # Running on localhost:3000
 ```
 
-## Adding a component
+## Installing a component
 
 Also see [Loading a component](loading-a-component)
 
 ```
-cd web/components
-git clone git@github.com:user/repo.git
-cd ../..
+ruby scripts/component_manager.rb install user/repo [branch_name [commit_sha]]
 ruby scripts/component_manager.rb export
 ```
+*`branch_name` and `commit_sha` are optional. Default to master and last commit on branch.*
 
 ## Loading a component
 
