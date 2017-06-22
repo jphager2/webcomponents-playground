@@ -17,7 +17,7 @@ class ComponentManager
             remote = git.remotes.first.url
             component = remote.split(':').last.sub(/\.git$/, '')
             branch = git.current_branch
-            commit = git.log.last.sha
+            commit = git.log.first.sha
 
             components << {
               component: component, branch: branch, commit: commit
@@ -72,8 +72,8 @@ class ComponentManager
 
     begin
       git = Git.clone(url, dir)
-      git.checkout(branch) if branch
-      git.checkout(commit) if commit
+      git.checkout(branch) if branch && false
+      git.checkout(commit) if commit && false
     rescue => e
       warn e.message
     end
