@@ -2,13 +2,11 @@ require 'git'
 require 'yaml'
 require 'english'
 
-module ComponentManager
+class ComponentManager
   COMPONENTS_DIR = 'web/components'.freeze
   COMPONENTS_FILE = 'components.lock'.freeze
 
-  module_function
-
-  def export
+  def export(*)
     components = []
 
     in_components_dir do
@@ -16,8 +14,14 @@ module ComponentManager
         Dir.chdir(repo) do
           begin
             git = Git.open(Dir.pwd)
-            remote = git.remotes.first.url.split(':').last.sub(/\.git$/, '')
-            components << remote
+            remote = git.remotes.first.url
+            component = remote.split(':').last.sub(/\.git$/, '')
+            branch = git.current_branch
+            commit = git.log.last.sha
+
+            components << {
+              component: component, branch: branch, commit: commit
+            }
           rescue => e
             puts "Repo in bad format (#{repo}): #{e.message}"
             fail
@@ -29,18 +33,58 @@ module ComponentManager
     write_components(components)
   end
   
-  def import
-    components = read_components
+  def import(*)
+    clone_components(read_components)
+  end
 
+  def install(args)
+    components = extract_components(args)
+    clone_components(components)
+  end
+
+  private
+
+  def extract_components(args)
+    component = args[0]
+    branch = args[1]
+    commit = args[2]
+
+    [
+      { component: component, branch: branch, commit: commit }
+    ]
+  end
+
+  def clone_components(components)
     in_components_dir do
       components.each do |component|
-        begin
-          Git.clone("git@github.com:#{component}.git", component.split('/').last)
-        rescue => e
-          warn e.message
-        end
+        clone_component(component)
       end
     end
+  end
+
+  def clone_component(component_meta)
+    component = component_meta.fetch(:component)
+    branch = component_meta.fetch(:branch)
+    commit = component_meta.fetch(:commit)
+
+    url = git_url(component)
+    dir = git_dir(component)
+
+    begin
+      git = Git.clone(url, dir)
+      git.checkout(branch) if branch
+      git.checkout(commit) if commit
+    rescue => e
+      warn e.message
+    end
+  end
+
+  def git_url(component)
+    "git@github.com:#{component}.git"
+  end
+
+  def git_dir(component)
+    component.split('/').last
   end
 
   def setup_components_dir!
@@ -77,15 +121,15 @@ module ComponentManager
   end
 end
 
-ALLOWED_ACTIONS = %w(import export).freeze
-
 if $PROGRAM_NAME == __FILE__
-  action = ARGV[0]
+  argv = ARGV.dup
+  manager = ComponentManager.new
+  action = argv.shift.to_s.to_sym
 
-  unless ALLOWED_ACTIONS.include?(action)
+  unless manager.public_methods.include?(action)
     puts "#{action} is not a known action"
     exit(1)
   end
 
-  ComponentManager.__send__(action)
+  manager.public_send(action, argv)
 end

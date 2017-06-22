@@ -1,31 +1,91 @@
 ---
-- ajaxorg/ace-builds
-- LostInBrittany/ace-widget
-- PolymerElements/font-roboto
-- LostInBrittany/granite-spinner
-- PolymerElements/iron-a11y-announcer
-- PolymerElements/iron-a11y-keys-behavior
-- PolymerElements/iron-ajax
-- PolymerElements/iron-behaviors
-- PolymerElements/iron-checked-element-behavior
-- PolymerElements/iron-flex-layout
-- PolymerElements/iron-form
-- PolymerElements/iron-form-element-behavior
-- PolymerElements/iron-icon
-- PolymerElements/iron-icons
-- PolymerElements/iron-iconset-svg
-- PolymerElements/iron-image
-- PolymerElements/iron-input
-- PolymerElements/iron-meta
-- PolymerElements/iron-validatable-behavior
-- PolymerElements/paper-behaviors
-- PolymerElements/paper-button
-- PolymerElements/paper-card
-- PolymerElements/paper-checkbox
-- PolymerElements/paper-input
-- PolymerElements/paper-ripple
-- justinribeiro/paper-snackbar
-- PolymerElements/paper-styles
-- Polymer/polymer
-- webcomponents/shadycss
-- webcomponents/webcomponentsjs
+- :component: ajaxorg/ace-builds
+  :branch: master
+  :commit: '01387134306d44415871cbb9da91652b752f195f'
+- :component: LostInBrittany/ace-widget
+  :branch: master
+  :commit: d45f915aaa1f10fc10ee687ff77f36807be95bc2
+- :component: PolymerElements/font-roboto
+  :branch: master
+  :commit: 5c5aba2e54f13b7460535799119bf8ef66ef7ad5
+- :component: LostInBrittany/granite-spinner
+  :branch: master
+  :commit: 2bb6ad02fe2c5cbb6e1f0b3500dc5661a2c4e82c
+- :component: PolymerElements/iron-a11y-announcer
+  :branch: master
+  :commit: db2857f7e98ad3138cd089d04324cd4936a0b01f
+- :component: PolymerElements/iron-a11y-keys-behavior
+  :branch: master
+  :commit: 0c2330c229a6fd3d200e2b84147ec6f94f17c22d
+- :component: PolymerElements/iron-ajax
+  :branch: master
+  :commit: 5bd7bb3f4f2112c41a83b11518a1056b249e903e
+- :component: PolymerElements/iron-behaviors
+  :branch: master
+  :commit: 3d14077db6781a495157dd7c7e648e271bea6c82
+- :component: PolymerElements/iron-checked-element-behavior
+  :branch: master
+  :commit: 10500a16e61e6f809f64d5c811cd5082428385c5
+- :component: PolymerElements/iron-flex-layout
+  :branch: master
+  :commit: 19a506928adb03cdee23e96f2d6fafd326168a58
+- :component: PolymerElements/iron-form
+  :branch: master
+  :commit: 9a18cf067a8bb0007bdb1bc351deb0a18a5335d5
+- :component: PolymerElements/iron-form-element-behavior
+  :branch: master
+  :commit: c10dd7e86d953dfa498c2ef4a752b8fa2e525438
+- :component: PolymerElements/iron-icon
+  :branch: master
+  :commit: e77365a99a4e6331f95048dcc9f7da3496b3ff2d
+- :component: PolymerElements/iron-icons
+  :branch: master
+  :commit: 38da67d9faba0d1d5d290ebfa76c0290392ab708
+- :component: PolymerElements/iron-iconset-svg
+  :branch: master
+  :commit: b6ee7c93b696c7adb8b1764fb483feabc8432701
+- :component: PolymerElements/iron-image
+  :branch: master
+  :commit: c40e7d79cc2a4834e011fee7330fe7e78e6eb0fb
+- :component: PolymerElements/iron-input
+  :branch: master
+  :commit: 60e8fcd3646e8efc6bd72efd94f4d7e224899b4e
+- :component: PolymerElements/iron-meta
+  :branch: master
+  :commit: 5f8676a947169eaad8d154f7fdec3e0585d5859f
+- :component: PolymerElements/iron-validatable-behavior
+  :branch: master
+  :commit: 2ecd3f411e298733b29f1660f75cb9b03ea31d77
+- :component: PolymerElements/paper-behaviors
+  :branch: master
+  :commit: b91e1a8283137d8f387297278a6ffc73e4a79bcf
+- :component: PolymerElements/paper-button
+  :branch: master
+  :commit: 108ee15a95d07707f249ceca1555bba7fc19c62c
+- :component: PolymerElements/paper-card
+  :branch: master
+  :commit: 9ac7e5384437ca3ec936907861e94ef902fe6939
+- :component: PolymerElements/paper-checkbox
+  :branch: master
+  :commit: aef071da87097abe3bba8768974c65eb8ae030aa
+- :component: PolymerElements/paper-input
+  :branch: master
+  :commit: 52ac75181d3fe6394472822344a7f6436eb119e2
+- :component: PolymerElements/paper-ripple
+  :branch: master
+  :commit: 2ecb2474450e47cd5e2c6d94a8e46c10f218b906
+- :component: justinribeiro/paper-snackbar
+  :branch: master
+  :commit: 2f60252977be3ee259ed50086e56324e725e8b9f
+- :component: PolymerElements/paper-styles
+  :branch: master
+  :commit: fbbfbea8a21bd5a8185142ba467e72e93baf75f5
+- :component: Polymer/polymer
+  :branch: master
+  :commit: b73caea07633c4bf69c59cd96769553733ea6c07
+- :component: webcomponents/shadycss
+  :branch: master
+  :commit: c342c6149b19b449024e655b1562fb6f51b52177
+- :component: webcomponents/webcomponentsjs
+  :branch: master
+  :commit: 6925986cc5fd319fb17b0d918d3e6b0a8d18633f
