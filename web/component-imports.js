@@ -8,6 +8,7 @@
     'paper-card/paper-card',
     'iron-form/iron-form',
     'paper-snackbar/paper-snackbar',
+    'lss-paper-date-picker/lss-paper-date-picker',
     'granite-spinner/granite-spinner',
   ];
 
