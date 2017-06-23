@@ -14,7 +14,7 @@ Playing around with web components.
 git clone git@github.com:jphager2/webcomponents-playground
 cd webcomponents-playground
 bower install
-ln -s bower_components web/components
+npm run build
 ```
 
 ## Running the server

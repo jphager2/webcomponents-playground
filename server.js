@@ -24,7 +24,13 @@ var finalize = function(response, code, headers, data) {
 };
 
 var absolutePath = function(path) {
-  return `${__dirname}/web` + path;
+  var subDir = '';
+
+  if (!path.match(/^\/bower_components/)) {
+    subDir = '/web';
+  }
+
+  return `${__dirname}${subDir}` + path;
 };
 
 var server = http.createServer(function(request, response) {

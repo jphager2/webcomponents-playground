@@ -1,5 +1,5 @@
 (function() {
-  var bowerImports = [
+  var imports = [
     'iron-icon/iron-icon',
     'iron-icons/iron-icons',
     'paper-checkbox/paper-checkbox',
@@ -9,21 +9,14 @@
     'iron-form/iron-form',
     'lss-paper-date-picker/lss-paper-date-picker',
     'granite-spinner/granite-spinner',
-  ];
-
-  var vendorImports = [
     'paper-snackbar/paper-snackbar',
   ];
 
   document.addEventListener('WebComponentsReady', function() {
-    var link = '';
+    var links = '';
 
-    bowerImports.forEach(function(file) {
-      links += `<link rel="import" href="components/${file}.html">`;
-    })
-
-    vendorImports.forEach(function(file) {
-      links += `<link rel="import" href="vendor/${file}.html">`;
+    imports.forEach(function(file) {
+      links += `<link rel="import" href="bower_components/${file}.html">`;
     })
 
     document.head.insertAdjacentHTML('beforeend', links);

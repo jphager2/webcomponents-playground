@@ -26,5 +26,13 @@
     "paper-checkbox": "^2.0.0",
     "paper-input": "^2.0.1",
     "polymer": "^2.0.1"
+  },
+  "resolutions": {
+    "iron-icon": "^2.0.0",
+    "paper-input": "^2.0.1",
+    "polymer": "^2.0.1",
+    "paper-ripple": "1 - 2",
+    "webcomponentsjs": "^v1.0.0",
+    "font-roboto": "^1.0.1"
   }
 }
