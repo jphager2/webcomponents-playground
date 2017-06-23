@@ -18,7 +18,7 @@ ruby scripts/component_manager.rb import
 ## Running the server
 
 ```
-node server
+npm start
 
 # Running on localhost:3000
 ```
