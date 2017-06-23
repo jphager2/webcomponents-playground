@@ -1,2 +1,4 @@
 *.swp
 components/
+components
+bower_components

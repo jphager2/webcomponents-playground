@@ -1,0 +1,30 @@
+{
+  "name": "webcomponents-playground",
+  "description": "Playing around with web components.",
+  "main": "server.js",
+  "authors": [
+    "jphager2"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jphager2/webcomponents-playground",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "core-icon": "Polymer/core-icon#master",
+    "granite-spinner": "^2.0.1",
+    "iron-form": "^1.1.5",
+    "iron-icon": "^2.0.0",
+    "iron-icons": "^2.0.1",
+    "lss-paper-date-picker": "^1.1.6",
+    "paper-card": "^0.1.5",
+    "paper-checkbox": "^2.0.0",
+    "paper-input": "^2.0.1",
+    "polymer": "^2.0.1"
+  }
+}
